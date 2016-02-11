@@ -37,39 +37,53 @@ header {
     position: absolute;
     right: 1em;
     top: 0;
+    color: $yellow;
 }
 
 .navigation{
+    top: 0;
+    background-color: $black;
     ul{
         padding: 0;
+        background-color: $black;
+        margin: 0;
     }
     li{
+        text-decoration: none;
         list-style-type: none;
-        &:first-child a{
-            border-top: 1px solid $light-grey;
+        font-weight: bold;
+        font-size: 20pt;
+        &:hover a{
+            text-transform: none;
+            border: 3px solid $yellow;
+            color: $yellow;
+            text-transform: uppercase;
         }
         a{
             display: block;
             text-align: center;
             padding: .5em 1em;
-            border-bottom: 1px solid $light-grey;
             text-decoration: none;
+            text-transform: uppercase;
+            background-color: $black;
+            color: $white;
+            margin: 3em;
         }
     }//li
 }// .navigation
 
 .toggle-btn,
 .close-btn{
-    color: $text-color;
+    color: $yellow;
     text-decoration: none;
     height: 40px;
     width: 40px;
+    font-size: 30pt;
     &:before{
         height: 40px;
         width: 40px;
         display: inline-block;
         padding: 13px 11px;
-        border: 1px solid $light-grey;
     }
     span{
         @include element-invisible;
@@ -133,21 +147,3 @@ body.script .navigation{
     position: static;
     right: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
